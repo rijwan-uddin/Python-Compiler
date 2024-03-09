@@ -12,7 +12,8 @@ class _IntroState extends State<Intro> {
   TextEditingController codeController = TextEditingController();
   String hintText = 'print("Hello, world!")';
   String contentText = 'Hello, world!'; // Content to show if the code matches
-  String compilerOutput = ''; // Variable to hold compiler output
+  String compilerOutput = ''; // Variable to
+  bool isHintVisible = true;// hold compiler output
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +49,117 @@ class _IntroState extends State<Intro> {
           ),
         ],
       ),
+
       body: SingleChildScrollView(
+
         child: Column(
           children: [
+            SizedBox(height: 10.0),
+            Container(
+              width: 350,
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey.shade100,
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'What is Python?',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  Text(
+                    'Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  Text(
+                    'It is used for:',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(
+                    '• Web development (server-side),\n'
+                        '• Software development,\n'
+                        '• Mathematics,\n'
+                        '• System scripting.',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Container(
+              width: 350,
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey.shade100,
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Python Syntax compared to other programming languages',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+
+                  SizedBox(height: 10.0),
+
+
+                  Text(
+                    '• Python was designed for readability, and has some similarities to the English language with influence from mathematics.,\n'
+                        '• Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.,\n'
+                        '• Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+
+
+
+            SizedBox(height: 10.0),
             Container(
               padding: const EdgeInsets.all(16.0),
               constraints: BoxConstraints(
@@ -65,10 +174,12 @@ class _IntroState extends State<Intro> {
                 maxLines: 5,
                 decoration: InputDecoration(
                   hintText: hintText,
+                  hintStyle: TextStyle(), // Set hint text color to white
                   border: InputBorder.none,
                 ),
               ),
             ),
+
             const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
@@ -84,16 +195,16 @@ class _IntroState extends State<Intro> {
               },
               child: const Text('Run code'),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Text(
                 compilerOutput,
-                style: TextStyle(fontSize: 16.0),
+                style: const TextStyle(fontSize: 16.0),
               ),
             ),
           ],

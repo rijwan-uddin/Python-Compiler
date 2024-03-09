@@ -129,7 +129,7 @@ class _ResourcesState extends State<Resources> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Heading: Learn Python",
+                        "Learn Python",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -138,7 +138,7 @@ class _ResourcesState extends State<Resources> {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        "Body: Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.",
+                        "Python is a popular programming language.\nPython can be used on a server to create web applications.",
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
