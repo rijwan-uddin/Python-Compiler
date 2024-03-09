@@ -56,7 +56,7 @@ class _IntroState extends State<Intro> {
           children: [
             SizedBox(height: 10.0),
             Container(
-              width: 350,
+
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.blueGrey.shade100,
@@ -114,7 +114,7 @@ class _IntroState extends State<Intro> {
             ),
             SizedBox(height: 10.0),
             Container(
-              width: 350,
+
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.blueGrey.shade100,
@@ -155,6 +155,25 @@ class _IntroState extends State<Intro> {
                 ],
               ),
             ),
+            SizedBox(height: 10.0),
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width * 0.8,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: const Text(
+                "Let's Practice",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+            ),
 
 
 
@@ -174,7 +193,7 @@ class _IntroState extends State<Intro> {
                 maxLines: 5,
                 decoration: InputDecoration(
                   hintText: hintText,
-                  hintStyle: TextStyle(), // Set hint text color to white
+
                   border: InputBorder.none,
                 ),
               ),
