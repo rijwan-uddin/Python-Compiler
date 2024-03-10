@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:py_compiler/topics/topicDetails/variable.dart';
 import 'topicDetails/intro.dart';
 class Topic extends StatefulWidget {
   const Topic({Key? key}) : super(key: key);
@@ -81,7 +82,7 @@ class _ResourcesState extends State<Topic> {
           const SizedBox(height: 10),
           GestureDetector(
             onTap: () {
-              // Navigate to desired screen here
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> variable()));// Navigate to desired screen here
             },
             child: Container(
               height: 50,
@@ -763,7 +764,7 @@ class _ResourcesState extends State<Topic> {
             ),
           ),
           const SizedBox(height: 10),
-          
+
         ],
       ),
     );
