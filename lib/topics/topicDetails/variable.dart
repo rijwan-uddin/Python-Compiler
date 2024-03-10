@@ -146,7 +146,7 @@ class _IntroState extends State<variable> {
                   maxWidth: MediaQuery.of(context).size.width * 0.8,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
+                  color: Colors.teal,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: const Text(
@@ -154,7 +154,7 @@ class _IntroState extends State<variable> {
                   style: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -212,6 +212,7 @@ class _IntroState extends State<variable> {
                   style: const TextStyle(fontSize: 16.0),
                 ),
               ),
+
             const SizedBox(height: 20),
             const Footer(),
           ],
