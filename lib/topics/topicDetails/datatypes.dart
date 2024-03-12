@@ -59,7 +59,7 @@ class _IntroState extends State<datatype> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
@@ -337,7 +337,8 @@ class _IntroState extends State<datatype> {
 
 
 
-            SizedBox(height: 10.0),
+
+            const SizedBox(height: 10.0),
             GestureDetector(
               onTap: openNextContainers,
               child: Container(
@@ -361,7 +362,7 @@ class _IntroState extends State<datatype> {
             ),
 
 
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             if (!isHintVisible)
               Container(
                 padding: const EdgeInsets.all(16.0),
