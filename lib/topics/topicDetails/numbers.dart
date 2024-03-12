@@ -10,8 +10,8 @@ class numbers extends StatefulWidget {
 
 class _NumberState extends State<numbers> {
   TextEditingController codeController = TextEditingController();
-  String hintText = 'x = 5\ny = "John"\nprint(x)\nprint(y)';
-  String contentText = '5 \nJhon'; // Content to show if the code matches
+  String hintText = '';
+  String contentText = ''; // Content to show if the code matches
   String compilerOutput = ''; // Variable to hold compiler output
   bool isHintVisible = true;
 
